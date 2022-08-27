@@ -25,6 +25,10 @@ $\*$ Corresponding author(s). E-mail(s): chaohu@iastate.edu; zhennhu@umich.edu;
 
 Contributing authors: acthelen@iastate.edu; xiaoge.zhang@polyu.edu.hk; olga.fink@epfl.ch; yan.lu@nist.gov; sayan.ghosh1@ge.com; bdyoun@snu.ac.kr; mdtodd@eng.ucsd.edu; sankaran.mahadevan@vanderbilt.edu
 
+## NOTE
+
+The dataset is labeled as having 124 cells, however, the authors of the orignal dataset noted that one of the cells degraded extremely quickly, in roughly 150 cycles. We did not include this cell in the study. Test - 2017-06-30_1C-4per_6C_CH9. EL150800460605. Primary Test Dataset. ~148 cycles. 
+
 
 ## Scripts Overview
 
