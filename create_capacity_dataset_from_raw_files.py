@@ -10,6 +10,12 @@ train_conds = conditions[ conditions['Dataset'] == 'Train']
 test1_conds = conditions[ conditions['Dataset'] == 'Prim. Test']
 test2_conds = conditions[ conditions['Dataset'] == 'Sec. test']
 
+# The original authors of the dataset noticed that one of the cells in the primary
+# test dataset had very short lifetime. The authors removed the cell from the 
+# dataset before performing any analysis. We have done the same. This is why
+# the dataset only has 123 cells in total when it is labeled "124." 
+test1_conds = test1_conds.drop(index=42) # Was previously 44 which was incorrect. 
+
 # Load in the data
 x_train = []
 y_train = []
@@ -36,8 +42,13 @@ for i in range(0,40):
     x_test2.append(data[:,0])
     y_test2.append(data[:,1])
 
-# there was an additional cell we dropped. Now 123 total
-test1_conds = test1_conds.drop(index=44)
+
+sz = []
+for i in range(0,len(x_train)):
+    sz.append(len(x_train[i]))
+sz = np.vstack(sz)
+sz_df = pd.DataFrame(sz)
+
 
 # Reset the index before saving
 test1_conds = test1_conds.reset_index().drop(columns='index')
