@@ -1,6 +1,6 @@
 # battery_digital_twin
 
-Questions regarding this repository should be directed to Adam Thelen (acthelen@iastate.edu).
+Questions regarding this repository should be directed to Adam Thelen (adamcthelen@gmail.com).
 
 $\ $
 
